@@ -6,7 +6,7 @@ var app = builder.Build();
 
 app.UseMiddleware<TokenValidationMiddleware>();
 
-app.MapHealthChecks("/health");
+app.MapHealthChecks("/user/health");
 app.MapGet("/", () => "Hello World!");
 
 app.Run();

@@ -9,7 +9,7 @@ public class TokenValidationMiddleware
 
 	public async Task InvokeAsync(HttpContext context)
 	{
-		if (context.Request.Path.StartsWithSegments("/health"))
+		if (context.Request.Path.StartsWithSegments("/user/health"))
 		{
 			await _next(context);
 			return;
@@ -32,7 +32,7 @@ public class TokenValidationMiddleware
 		else
 		{
 			context.Response.StatusCode = 401;
-				await context.Response.WriteAsync("Unauthorized: Not token provided");
+			await context.Response.WriteAsync("Unauthorized: No token provided");
 		}
 	}
 }
