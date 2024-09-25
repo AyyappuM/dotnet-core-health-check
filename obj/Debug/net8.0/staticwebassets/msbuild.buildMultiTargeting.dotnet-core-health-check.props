@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/dotnet-core-health-check.props" />
+</Project>
