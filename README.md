@@ -23,3 +23,5 @@ Healthy
 $ curl -H "Authorization: Bearer 123" http://localhost:5004/health
 Healthy 
 ```
+
+The token would be validated for all paths other than "/health".
